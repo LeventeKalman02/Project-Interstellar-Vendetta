@@ -1,4 +1,9 @@
 # Vr Game Project
 
-Game Setting Idea
+## Game Idea
+
+
+## Game Setting
+
+
 
