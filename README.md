@@ -4,7 +4,7 @@
 
 
 ## Game Setting
+The Game Is Set in a Futuristic Distopian Sci-Fi world. 
 
-
-## Issues & Bugs Faced During Development-
+## Issues & Bugs Faced During Development
 
