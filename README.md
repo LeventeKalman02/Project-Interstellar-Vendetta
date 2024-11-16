@@ -6,4 +6,5 @@
 ## Game Setting
 
 
+## Issues & Bugs Faced During Development-
 
