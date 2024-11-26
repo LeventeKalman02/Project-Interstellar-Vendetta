@@ -8,6 +8,7 @@ It is a first person shooter game based in a futuristic setting where you are aw
 
 
 ## Game Setting
+![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
 
 The Game Is Set in a Futuristic Sci-Fi world. 
 
