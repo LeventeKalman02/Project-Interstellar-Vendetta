@@ -8,7 +8,8 @@ It is a first person shooter game based in a futuristic setting where you are aw
 
 
 ## Game Setting
-The Game Is Set in a Futuristic Distopian Sci-Fi world. 
+
+The Game Is Set in a Futuristic Sci-Fi world. 
 
 ## Issues & Bugs Faced During Development
 - Snapping of objects to the hand at the incorrect location on the object. 
