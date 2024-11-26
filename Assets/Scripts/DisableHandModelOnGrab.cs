@@ -8,9 +8,8 @@ public class DisableHandModelOnGrab : MonoBehaviour
     public GameObject leftHandModel;
     public GameObject rightHandModel;
 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Start()
     {
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.selectEntered.AddListener(HideGrabbingHand);
@@ -49,11 +48,5 @@ public class DisableHandModelOnGrab : MonoBehaviour
         {
             Debug.LogError("Hand tag not found");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
