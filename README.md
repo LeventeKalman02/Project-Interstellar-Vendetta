@@ -5,6 +5,7 @@ This is a Virtual Reality Game made in Unity for the final year project in BSC(H
 
 ## Game Idea
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
+
 The idea for this game is that it is a futuristic setting where you wake up on a space ship with no memory of what happen. You are left alone, not knowing what lurks on the ship...
 It is a first person shooter VR game where the player has to survive using the environment and the weapons and ammuntion they are able to find.
 
