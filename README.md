@@ -7,11 +7,11 @@ This is a Virtual Reality Game made in Unity for the final year project in BSC(H
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
 
 The idea for this game is that it is a futuristic setting where you wake up on a space ship with no memory of what happen. You are left alone, not knowing what lurks on the ship...
-It is a first person shooter VR game where the player has to survive using the environment and the weapons and ammuntion they are able to find.
+It is a first person shooter VR game where the player has to survive using the environment, the weapons and ammuntion they are able to find around them while avoiding enemies aboard the ship.
 
 I am using a low poly world design from the Unity Store to create the world and the environment. 
 The weapons that the player can use are also a pack from the Unity Store which is compatible and easy to use in VR development.
 
 ## Issues & Bugs Faced During Development
-- Snapping of objects to the hand at the incorrect location on the object. 
-- 
+- Snapping of objects to the hand at the incorrect location on the object. Adjusted in editor and setting the default values to snap correctly.
+- Hand Model/Animation stopped working. Research, testing and bug fixes carried out to try to solve the issue.
