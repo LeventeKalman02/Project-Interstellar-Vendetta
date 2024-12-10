@@ -19,11 +19,11 @@ public class DisableHandModelOnGrab : MonoBehaviour
     //hide hand model when grabbing an object
     public void HideGrabbingHand(SelectEnterEventArgs args)
     {
-        if(args.interactorObject.transform.CompareTag("Left Hand") == true)
+        if(args.interactorObject.transform.tag == "LeftHand")
         {
             leftHandModel.SetActive(false);
         }
-        else if(args.interactorObject.transform.CompareTag("Right Hand") == true)
+        else if(args.interactorObject.transform.tag == "RightHand")
         {
             rightHandModel.SetActive(false);
         }
@@ -36,11 +36,11 @@ public class DisableHandModelOnGrab : MonoBehaviour
     //show hand model when releasing an object
     public void ShowGrabbingHand(SelectExitEventArgs args)
     {
-        if (args.interactorObject.transform.CompareTag("Left Hand") == false)
+        if (args.interactorObject.transform.tag == "LeftHand")
         {
             leftHandModel.SetActive(true);
         }
-        else if (args.interactorObject.transform.CompareTag("Right Hand") == false)
+        else if (args.interactorObject.transform.tag == "RightHand")
         {
             rightHandModel.SetActive(true);
         }

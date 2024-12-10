@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Meteor
-  - Left Hand
-  - Right Hand
+  - LeftHand
+  - RightHand
   layers:
   - Default
   - TransparentFX
