@@ -1,7 +1,9 @@
-# Vr Game Project
+# Vr Game Project - Nebula Vendetta
 ![image](https://github.com/user-attachments/assets/1c8c44d4-aca7-4760-943b-e8e435e9d057)
 
 This is a Virtual Reality Game made in Unity for the final year project in BSC(Hons) in Software Development at ATU Galway.
+
+The name for the game is inspired by the setting. "Nebula" invites the vastness and beauty of space to the mind while "Vendetta" adds a personal touch and mystery to the title of the game.
 
 ## Game Idea
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
