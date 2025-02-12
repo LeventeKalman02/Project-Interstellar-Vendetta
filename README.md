@@ -5,6 +5,13 @@ This is a Virtual Reality Game made in Unity for the final year project in BSC(H
 
 The name for the game is inspired by the setting. "Interstellar" invites the vastness and beauty of space to the mind, while "Vendetta" adds a personal touch and mystery to the title of the game.
 
+## How to Play
+**For this game you are required to own a Virtual Reality Headset**
+This game was tested and developed on the Oculus Quest 2 headset
+
+### Run the game
+to run the game you need to execute the .exe file
+
 ## Game Idea
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
 
