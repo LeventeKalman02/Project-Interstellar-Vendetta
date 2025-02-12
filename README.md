@@ -7,6 +7,7 @@ The name for the game is inspired by the setting. "Interstellar" invites the vas
 
 ## How to Play
 **For this game you are required to own a Virtual Reality Headset**
+
 This game was tested and developed on the Oculus Quest 2 headset
 
 ### Run the game
