@@ -11,7 +11,8 @@ The name for the game is inspired by the setting. "Interstellar" invites the vas
 This game was tested and developed on the Oculus Quest 2 headset.
 
 ### Run the game
-to run the game you need to execute the .exe file.
+Download the project as a ``.Zip`` file and extract it to a folder of your choosing. 
+To run the game you need to execute the .exe file.
 
 ## Game Idea
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
