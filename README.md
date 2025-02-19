@@ -12,6 +12,7 @@ This game was tested and developed on the Oculus Quest 2 headset.
 
 ### Run the game
 Download the project as a ``.Zip`` file and extract it to a folder of your choosing. 
+
 To run the game you need to execute the .exe file.
 
 ## Game Idea
