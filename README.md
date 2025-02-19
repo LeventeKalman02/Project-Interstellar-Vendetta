@@ -27,4 +27,3 @@ The weapons that the player can use are also a pack from the Unity Store which i
 ## Main Issues & Bugs Faced During Development
 - Snapping of objects to the hand at the incorrect location on the object. Adjusted in editor and setting the default values to snap correctly.
 - Hand Model/Animation stopped working. Research, testing and bug fixes carried out to try to solve the issue.
-
