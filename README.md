@@ -31,3 +31,4 @@ The goal of the game is to fight your way to the Hangar where you have to get on
 ## Main Issues & Bugs Faced During Development
 - Snapping of objects to the hand at the incorrect location on the object. Adjusted in editor and setting the default values to snap correctly.
 - Hand Model/Animation stopped working. Research, testing and bug fixes carried out to try to solve the issue.
+-  Minor bug/issue. Hand model cannot be disabled while holding weapons. Decided not to fix as of now.
