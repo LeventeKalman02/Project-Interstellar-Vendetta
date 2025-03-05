@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cc917495ff9c33c45b352a539fab3db3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 215878
+  packageName: Alien (Different Skins) and Glowing Sword
+  packageVersion: 2020.3.30f1
+  assetPath: Assets/Wahitecture/AlienCharacter/Materials/SkinA_M.mat
+  uploadId: 487179
