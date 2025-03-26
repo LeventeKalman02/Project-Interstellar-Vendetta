@@ -7,6 +7,9 @@ TagManager:
   - Meteor
   - LeftHand
   - RightHand
+  - Left Hand
+  - Right Hand
+  - Enemy
   layers:
   - Default
   - TransparentFX
