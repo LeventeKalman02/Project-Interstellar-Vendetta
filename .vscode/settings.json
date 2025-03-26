@@ -57,5 +57,6 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "Vr Game Project.sln",
+    "dotnet.preferCSharpExtension": true,
 
 }
