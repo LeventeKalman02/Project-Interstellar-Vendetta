@@ -56,6 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Vr Game Project.sln",
-
+    "dotnet.defaultSolution": "Project-Interstellar-Vendetta.sln",
+    "dotnet.preferCSharpExtension": true
 }
