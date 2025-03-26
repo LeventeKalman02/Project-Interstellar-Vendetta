@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &244498776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,6 +177,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a924ef171be764ca1bfc0883aefb84, type: 3}
+=======
+>>>>>>> 63f149092ebefb400fe8580c58830618f1b0156a
 --- !u!1 &426484750
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +189,10 @@ GameObject:
   m_Component:
   - component: {fileID: 426484752}
   - component: {fileID: 426484751}
+<<<<<<< HEAD
   - component: {fileID: 426484753}
+=======
+>>>>>>> 63f149092ebefb400fe8580c58830618f1b0156a
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -274,6 +280,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!114 &426484753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +527,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 63f149092ebefb400fe8580c58830618f1b0156a
 --- !u!1 &1049855985
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,6 +621,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1001 &1184274996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -669,14 +679,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c00eaf044d809c4ba96aee85a01ba28, type: 3}
+=======
+>>>>>>> 63f149092ebefb400fe8580c58830618f1b0156a
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1049855988}
   - {fileID: 426484752}
+<<<<<<< HEAD
   - {fileID: 882075963}
   - {fileID: 244498776}
   - {fileID: 1184274996}
   - {fileID: 748200799}
   - {fileID: 545461087}
+=======
+>>>>>>> 63f149092ebefb400fe8580c58830618f1b0156a
