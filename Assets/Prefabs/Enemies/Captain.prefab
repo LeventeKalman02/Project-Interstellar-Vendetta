@@ -1300,7 +1300,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 4
+  walkPointRange: 7
   timeBetweenAttacks: 0.3
   sightRange: 20
   attackRange: 1.5
