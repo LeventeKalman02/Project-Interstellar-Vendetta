@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+
+    public float health = 100f;
     public LayerMask whatIsGround, whatIsPlayer;
 
     //patrolling
@@ -67,6 +69,38 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
-        
+        agent.SetDestination(transform.position); //stop moving
+        transform.LookAt(player); //look at the player
+        if (!alreadyAttacked) {
+
+            //attack code here
+
+            Debug.Log("Attacking player!");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks); //reset the attack after a certain time
+        }
+    }
+
+    private void ResetAttack() {
+        alreadyAttacked = false; //reset the attack
+    }
+
+    private void TakeDamage(int damage) {
+        health -= damage; //reduce health by damage amount
+        if (health <= 0) {
+            DestroyEnemy(); //call DestroyEnemy function if health is less than or equal to 0
+        }
+    }
+
+    private void DestroyEnemy() {
+        Destroy(gameObject); //destroy the enemy game object
+    }
+
+    //use to visualize the sight and attack range in the editor
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red; //set the color of the gizmos to red
+        Gizmos.DrawWireSphere(transform.position, sightRange); //draw a wire sphere around the enemy to show the sight range
+        Gizmos.color = Color.blue; //set the color of the gizmos to blue
+        Gizmos.DrawWireSphere(transform.position, attackRange); //draw a wire sphere around the enemy to show the attack range
     }
 }
