@@ -40,7 +40,7 @@ public class EnemyAI : MonoBehaviour
         if (playerInAttackRange && playerInSightRange) Attack();
     }
 
-//enemy patrolling
+    //enemy patrolling
     private void Patrolling() {
         //set walk point if null
         if (!walkPointSet) SearchWalkPoint();
@@ -65,6 +65,7 @@ public class EnemyAI : MonoBehaviour
             walkPointSet = true;
         }
     }
+
     private void ChasePlayer() {
         agent.SetDestination(player.position); //set the destination to the player position
     }
