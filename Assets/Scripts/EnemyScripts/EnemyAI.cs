@@ -48,10 +48,20 @@ public class EnemyAI : MonoBehaviour
         if (walkPointSet) agent.SetDestination(walkPoint);
         //calculate distance to walk point
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        if (!CanReach()) {
+            walkPointSet = false; //if the enemy can't reach the walk point, set to false
+        }
 
         if (distanceToWalkPoint.magnitude < 1f) {
             walkPointSet = false; //walk point reached, set to false
         }
+    }
+
+    //check if the enemy can reach the walk point
+    private bool CanReach()
+    {
+        if (agent.pathPending && agent.remainingDistance > agent.stoppingDistance && agent.velocity.sqrMagnitude == 0f) return false;
+        return true;
     }
 
     private void SearchWalkPoint() {
