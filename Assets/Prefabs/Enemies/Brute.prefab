@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 8457858475494723117}
   - component: {fileID: 5360350296098230145}
   - component: {fileID: -2917556921096003320}
+  - component: {fileID: -5008458257914866272}
   m_Layer: 0
   m_Name: Brute
   m_TagString: Untagged
@@ -777,6 +778,34 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-5008458257914866272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859631237889316830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c95773c45bc6d4ea5c5c61f2eabc13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: -2917556921096003320}
+  player: {fileID: 5853103980531987447}
+  health: 100
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 0.7
+  sightRange: 15
+  attackRange: 1.5
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1 &3105287832185444203
 GameObject:
   m_ObjectHideFlags: 0
