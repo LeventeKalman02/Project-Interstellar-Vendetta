@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
     }
 
 //enemy patrolling
-    private void Patrolling(){
+    private void Patrolling() {
         //set walk point if null
         if (!walkPointSet) SearchWalkPoint();
         //walk to the set walk point
@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void SearchWalkPoint(){
+    private void SearchWalkPoint() {
         //calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange); //return random value depending on walk point range
         float randomX = Random.Range(-walkPointRange, walkPointRange);
@@ -63,12 +63,10 @@ public class EnemyAI : MonoBehaviour
             walkPointSet = true;
         }
     }
-    private void ChasePlayer()
-    {
-
+    private void ChasePlayer() {
+        agent.SetDestination(player.position); //set the destination to the player position
     }
-    private void Attack()
-    {
-
+    private void Attack() {
+        
     }
 }
