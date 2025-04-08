@@ -20,6 +20,10 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    Animator animator;
+
+    BoxCollider boxCollider;
+
     //states
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -28,6 +32,8 @@ public class EnemyAI : MonoBehaviour
     private void Awake() {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponentInChildren<BoxCollider>();
     }
 
     private void Update() {
@@ -80,23 +86,37 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
-        agent.SetDestination(transform.position); //stop moving
-        transform.LookAt(player); //look at the player
-        if (!alreadyAttacked) {
-
-            //attack code here
-
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+            animator.SetTrigger("Attack"); //trigger the attack animation
+            agent.SetDestination(transform.position); //stop moving
+            transform.LookAt(player); //look at the player
             Debug.Log("Attacking player!");
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks); //reset the attack after a certain time
         }
     }
 
-    private void ResetAttack() {
-        alreadyAttacked = false; //reset the attack
+    //enable the attack collider
+    private void EnableAttack() {
+        boxCollider.enabled = true;
     }
 
-    private void TakeDamage(int damage) {
+    private void DisableAttack()
+    {
+        boxCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            //call the TakeDamage function from the PlayerHealth script
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null) {
+                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                Debug.Log("Player took damage!");
+            }
+        }
+        
+    }
+
+    public void TakeDamage(int damage) {
         health -= damage; //reduce health by damage amount
         if (health <= 0) {
             DestroyEnemy(); //call DestroyEnemy function if health is less than or equal to 0
