@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Handle player death (e.g., play animation, restart level, etc.)
         Debug.Log("Player has died!");
+        // Load the GameOver scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         
     }
 }
