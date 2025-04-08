@@ -22,6 +22,6 @@ public class PlayerHealth : MonoBehaviour
     {
         // Handle player death (e.g., play animation, restart level, etc.)
         Debug.Log("Player has died!");
-        // You can add more logic here, such as restarting the game or showing a game over screen.
+        
     }
 }

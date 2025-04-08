@@ -116,7 +116,7 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    private void TakeDamage(int damage) {
+    public void TakeDamage(int damage) {
         health -= damage; //reduce health by damage amount
         if (health <= 0) {
             DestroyEnemy(); //call DestroyEnemy function if health is less than or equal to 0
