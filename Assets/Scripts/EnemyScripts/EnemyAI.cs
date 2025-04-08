@@ -22,6 +22,8 @@ public class EnemyAI : MonoBehaviour
 
     Animator animator;
 
+    BoxCollider boxCollider;
+
     //states
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -31,6 +33,7 @@ public class EnemyAI : MonoBehaviour
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        boxCollider = GetComponentInChildren<BoxCollider>();
     }
 
     private void Update() {
@@ -95,6 +98,27 @@ public class EnemyAI : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks); //reset the attack after a certain time
         }
+    }
+
+    //enable the attack collider
+    private void EnableAttack() {
+        boxCollider.enabled = true;
+    }
+
+    private void DisableAttack()
+    {
+        boxCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Player")) {
+            //call the TakeDamage function from the PlayerHealth script
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null) {
+                playerHealth.TakeDamage(10); //pass the damage amount to the TakeDamage function
+            }
+        }
+        
     }
 
     private void ResetAttack() {
