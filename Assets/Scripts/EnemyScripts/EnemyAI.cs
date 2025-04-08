@@ -115,7 +115,8 @@ public class EnemyAI : MonoBehaviour
             //call the TakeDamage function from the PlayerHealth script
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null) {
-                playerHealth.TakeDamage(10); //pass the damage amount to the TakeDamage function
+                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                Debug.Log("Player took damage!");
             }
         }
         
