@@ -20,6 +20,8 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
 
+    Animator animator;
+
     //states
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -28,6 +30,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake() {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update() {
@@ -80,11 +83,13 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
+        animator.SetTrigger("Attack"); //trigger the attack animation
         agent.SetDestination(transform.position); //stop moving
         transform.LookAt(player); //look at the player
         if (!alreadyAttacked) {
 
             //attack code here
+            
 
             Debug.Log("Attacking player!");
             alreadyAttacked = true;
