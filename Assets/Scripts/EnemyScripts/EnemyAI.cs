@@ -86,17 +86,11 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
-        animator.SetTrigger("Attack"); //trigger the attack animation
-        agent.SetDestination(transform.position); //stop moving
-        transform.LookAt(player); //look at the player
-        if (!alreadyAttacked) {
-
-            //attack code here
-            
-
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+            animator.SetTrigger("Attack"); //trigger the attack animation
+            agent.SetDestination(transform.position); //stop moving
+            transform.LookAt(player); //look at the player
             Debug.Log("Attacking player!");
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks); //reset the attack after a certain time
         }
     }
 
@@ -120,10 +114,6 @@ public class EnemyAI : MonoBehaviour
             }
         }
         
-    }
-
-    private void ResetAttack() {
-        alreadyAttacked = false; //reset the attack
     }
 
     private void TakeDamage(int damage) {
