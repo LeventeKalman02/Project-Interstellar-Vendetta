@@ -16,6 +16,9 @@ Download the project as a ``.Zip`` file and extract it to a folder of your choos
 
 To run the game you need to execute the .exe file.
 
+### Win Condition
+To win the game and survive, you need to find and kill all enemies on the map and then head to a certain location on the map which you can escape from and survive the horror.
+
 ![image](https://github.com/user-attachments/assets/1c8c44d4-aca7-4760-943b-e8e435e9d057)
 
 ## Game Idea
