@@ -792,7 +792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: -2917556921096003320}
   player: {fileID: 5853103980531987447}
-  health: 100
+  health: 150
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
