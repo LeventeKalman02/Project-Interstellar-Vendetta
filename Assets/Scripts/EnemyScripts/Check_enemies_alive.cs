@@ -29,6 +29,11 @@ public class Check_enemies_alive : MonoBehaviour
         {
             // They are dead!
             return true;
+
+            //display message to player that all enemies are dead
+            //move to the hangar to escape
+            //load victory scene
+
         }
         else
         {
