@@ -49,7 +49,14 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Player has died!");
         
         // Load the GameOver scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-        
+        if (SceneTransitionManager.singleton != null)
+        {
+            SceneTransitionManager.singleton.GoToScene(2); // Use SceneTransitionManager for fade-out
+        }
+        else
+        {
+            Debug.LogError("SceneTransitionManager is not set up in the scene.");
+        }
+
     }
 }

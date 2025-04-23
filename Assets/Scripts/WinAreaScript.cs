@@ -46,6 +46,13 @@ public class WinAreaScript : MonoBehaviour
     private void LoadVictoryScene()
     {
         Debug.Log("Victory! Loading victory scene...");
-        SceneManager.LoadScene("VictoryScene"); // Replace "VictoryScene" with your actual scene name or index
+        if (SceneTransitionManager.singleton != null)
+        {
+            SceneTransitionManager.singleton.GoToScene(3); // Use SceneTransitionManager for fade-out
+        }
+        else
+        {
+            Debug.LogError("SceneTransitionManager is not set up in the scene.");
+        }
     }
 }
