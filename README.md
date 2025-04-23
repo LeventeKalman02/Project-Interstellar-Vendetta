@@ -2,6 +2,8 @@
 
 Developed By - Levente Kalman
 
+![image](https://github.com/user-attachments/assets/59ef8415-07c5-4df5-9d99-6b5a1f8bd1d1)
+
 This is a Virtual Reality Game made in Unity for the final year project in BSC(Hons) in Software Development at ATU Galway.
 
 The name for the game is inspired by the setting. "Interstellar" invites the vastness and beauty of space to the mind, while "Vendetta" adds a personal touch and mystery to the title of the game.
