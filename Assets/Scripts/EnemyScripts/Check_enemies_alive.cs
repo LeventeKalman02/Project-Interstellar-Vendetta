@@ -1,16 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Check_enemies_alive : MonoBehaviour
 {
 
     List<GameObject> listOfEnemies = new List<GameObject>();
+    public GameObject victoryMessage;
+    public GameObject survivedMessage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         listOfEnemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         print(listOfEnemies.Count);
+
+        // Ensure the victory message is hidden at the start
+        if (victoryMessage != null)
+        {
+            victoryMessage.SetActive(false);
+        }
     }
 
     public void KilledOpponent(GameObject opponent)
@@ -21,24 +30,25 @@ public class Check_enemies_alive : MonoBehaviour
         }
 
         print(listOfEnemies.Count);
+
+        // Check if all enemies are dead
+        if (AreOpponentsDead())
+        {
+            ShowVictoryMessage();
+        }
     }
 
     public bool AreOpponentsDead()
     {
-        if (listOfEnemies.Count <= 0)
-        {
-            // They are dead!
-            return true;
+        return listOfEnemies.Count <= 0; // Check if the list is empty or null
+    }
 
-            //display message to player that all enemies are dead
-            //move to the hangar to escape
-            //load victory scene
-
-        }
-        else
+    private void ShowVictoryMessage()
+    {
+        if (victoryMessage != null)
         {
-            // They're still alive
-            return false;
+            victoryMessage.SetActive(true); // Display the message
+            survivedMessage.SetActive(false);
         }
     }
 }
