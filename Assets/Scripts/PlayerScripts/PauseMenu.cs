@@ -28,13 +28,13 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
             pauseMenu = true;
-            Time.timeScale = 1f; // Resume the game
+            Time.timeScale = 1; // Resume the game
         }
         else if(!pauseMenu)
         {
             pauseMenuUI.SetActive(true);
             pauseMenu = false;
-            Time.timeScale = 0f; // Pause the game
+            Time.timeScale = 0; // Pause the game
         }
     }
 
