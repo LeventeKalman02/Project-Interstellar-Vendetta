@@ -10,6 +10,8 @@ TagManager:
   - Enemy
   - RightHandModel
   - LeftHandModel
+  - Left Hand
+  - Right Hand
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Ground
   - Enemy
   - 
-  - 
+  - Camera
   - 
   - 
   - 
