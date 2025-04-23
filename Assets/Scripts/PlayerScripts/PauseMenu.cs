@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -34,6 +35,17 @@ public class PauseMenu : MonoBehaviour
             pauseMenuUI.SetActive(true);
             pauseMenu = false;
             Time.timeScale = 0f; // Pause the game
+        }
+    }
+
+    public void Restart() {
+        if (SceneTransitionManager.singleton != null)
+        {
+            SceneTransitionManager.singleton.GoToScene(SceneManager.GetActiveScene().buildIndex); // Use SceneTransitionManager for fade-out
+        }
+        else
+        {
+            Debug.LogError("SceneTransitionManager is not set up in the scene.");
         }
     }
 
