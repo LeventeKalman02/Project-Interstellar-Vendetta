@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class PauseMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        DisplayUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PauseButtonPressed(InputAction.CallbackContext context)
     {
-        
+        if (context.performed)
+        {
+            DisplayUI();
+        }
     }
 
     public void DisplayUI()
@@ -32,6 +35,22 @@ public class PauseMenu : MonoBehaviour
             pauseMenu = false;
             Time.timeScale = 0f; // Pause the game
         }
+    }
+
+    public void BackToMenu() {
+        if (SceneTransitionManager.singleton != null)
+        {
+            SceneTransitionManager.singleton.GoToScene(0); // Use SceneTransitionManager for fade-out
+        }
+        else
+        {
+            Debug.LogError("SceneTransitionManager is not set up in the scene.");
+        }
+    }
+
+    public void Exit() {
+        Application.Quit();
+        Debug.Log("Exit Game");
     }
 
 }
