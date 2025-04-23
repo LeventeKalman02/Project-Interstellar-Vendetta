@@ -8,6 +8,7 @@ public class Check_enemies_alive : MonoBehaviour
     List<GameObject> listOfEnemies = new List<GameObject>();
     public GameObject victoryMessage;
     public GameObject survivedMessage;
+    public GameObject winArea;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +36,7 @@ public class Check_enemies_alive : MonoBehaviour
         if (AreOpponentsDead())
         {
             ShowVictoryMessage();
+            ActivateWinArea();
         }
     }
 
@@ -49,6 +51,14 @@ public class Check_enemies_alive : MonoBehaviour
         {
             victoryMessage.SetActive(true); // Display the message
             survivedMessage.SetActive(false);
+        }
+    }
+
+    private void ActivateWinArea()
+    {
+        if (winArea != null)
+        {
+            winArea.SetActive(true); // Activate the win area
         }
     }
 }
