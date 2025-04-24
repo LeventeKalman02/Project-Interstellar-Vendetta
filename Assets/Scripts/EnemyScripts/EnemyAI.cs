@@ -148,6 +148,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void DestroyEnemy() {
+        Check_enemies_alive.instance.KilledOpponent(gameObject); //call the KilledOpponent function from the Check_enemies_alive script
         Destroy(gameObject); //destroy the enemy game object
     }
 

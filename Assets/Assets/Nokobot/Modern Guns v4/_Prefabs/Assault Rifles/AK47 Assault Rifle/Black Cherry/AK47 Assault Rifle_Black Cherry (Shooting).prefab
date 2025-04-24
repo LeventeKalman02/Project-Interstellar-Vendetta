@@ -70,6 +70,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8036983765008961061, guid: 0efabdf450933444d9283226d836a578, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9116132407415020405}
     - targetCorrespondingSourceObject: {fileID: 5357505057293022942, guid: 0efabdf450933444d9283226d836a578, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053946027007775678}
@@ -105,6 +108,7 @@ MonoBehaviour:
   destroyTimer: 2
   shotPower: 750
   ejectPower: 350
+  damage: 10
 --- !u!65 &2396957531325338440 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 8098114230706825379, guid: 0efabdf450933444d9283226d836a578, type: 3}
@@ -115,6 +119,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8505361537796137054, guid: 0efabdf450933444d9283226d836a578, type: 3}
   m_PrefabInstance: {fileID: 5846221867652283371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4515115875274601934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8036983765008961061, guid: 0efabdf450933444d9283226d836a578, type: 3}
+  m_PrefabInstance: {fileID: 5846221867652283371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9116132407415020405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515115875274601934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610734390641b1b45ab5685c66437e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHandModel: {fileID: 0}
+  rightHandModel: {fileID: 0}
 --- !u!95 &6862266659724848113 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1016222501747757082, guid: 0efabdf450933444d9283226d836a578, type: 3}

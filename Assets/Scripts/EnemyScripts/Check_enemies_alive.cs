@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Check_enemies_alive : MonoBehaviour
 {
+    public static Check_enemies_alive instance;
 
     List<GameObject> listOfEnemies = new List<GameObject>();
     public GameObject victoryMessage;
@@ -13,6 +14,7 @@ public class Check_enemies_alive : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        instance = this;
         listOfEnemies.AddRange(GameObject.FindGameObjectsWithTag("Enemy"));
         print(listOfEnemies.Count);
 
