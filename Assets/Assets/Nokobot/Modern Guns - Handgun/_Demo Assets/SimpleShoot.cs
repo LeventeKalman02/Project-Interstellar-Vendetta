@@ -20,7 +20,7 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
-    //[SerializeField] private int damage = 10;
+    [SerializeField] private int damage = 10;
 
 
     void Start()
@@ -56,8 +56,9 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
-
+        GameObject obj = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+        obj.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+        obj.GetComponent<DamageScript>().damage = damage;
     }
 
     //This function creates a casing at the ejection slot

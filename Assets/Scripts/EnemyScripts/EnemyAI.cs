@@ -110,12 +110,30 @@ public class EnemyAI : MonoBehaviour
         boxCollider.enabled = false;
     }
 
-    public void OnTriggerEnter(Collider other) {
+    public void OnTriggerEnter(Collider other)
+    {
         Debug.Log("Player detected!" + other.gameObject.name); //log player detection
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
             //call the TakeDamage function from the PlayerHealth script
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null) {
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                Debug.Log("Player took damage!");
+            }
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Player detected2!" + collision.gameObject.name); //log player detection
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            //call the TakeDamage function from the PlayerHealth script
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
                 playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
                 Debug.Log("Player took damage!");
             }

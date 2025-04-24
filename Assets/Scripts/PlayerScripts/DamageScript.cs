@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
-    public float damage = 35f; // Damage value for the bullet
+    public int damage = 35; // Damage value for the bullet
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +13,7 @@ public class DamageScript : MonoBehaviour
             if (enemy != null)
             {
                 // Deal damage to the player
-                enemy.TakeDamage(35); // Adjust damage value as needed
+                enemy.TakeDamage(damage); // Adjust damage value as needed
                 GameObject.Destroy(gameObject); // Destroy the bullet after hitting the enemy
             }
         }

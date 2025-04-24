@@ -1732,6 +1732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6190964853199515844}
   - component: {fileID: 8475813994332485713}
+  - component: {fileID: 6501319548024030164}
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
@@ -1780,6 +1781,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.27949363, y: 0.59577775, z: 0.14930879}
   m_Center: {x: -0.035496026, y: -0.04591937, z: 0.018043146}
+--- !u!114 &6501319548024030164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606862846835298022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3ef8c6fe1f9d444ad30bdbbc8442a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 816860120273964817}
 --- !u!1 &6630981647395753035
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -48,16 +49,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // Handle player death (e.g., play animation, restart level, etc.)
         Debug.Log("Player has died!");
+        SceneManager.LoadScene(2);
         
-        // Load the GameOver scene
-        if (SceneTransitionManager.singleton != null)
-        {
-            SceneTransitionManager.singleton.GoToScene(2); // Use SceneTransitionManager for fade-out
-        }
-        else
-        {
-            Debug.LogError("SceneTransitionManager is not set up in the scene.");
-        }
-
     }
 }
