@@ -110,7 +110,8 @@ public class EnemyAI : MonoBehaviour
         boxCollider.enabled = false;
     }
 
-    private void OnTriggerEnter(Collider other) {
+    public void OnTriggerEnter(Collider other) {
+        Debug.Log("Player detected!" + other.gameObject.name); //log player detection
         if (other.CompareTag("Player")) {
             //call the TakeDamage function from the PlayerHealth script
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
@@ -119,7 +120,6 @@ public class EnemyAI : MonoBehaviour
                 Debug.Log("Player took damage!");
             }
         }
-        
     }
 
     public void TakeDamage(int damage) {
