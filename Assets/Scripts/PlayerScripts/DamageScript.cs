@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DamageScript : MonoBehaviour
 {
+    public float damage = 35f; // Damage value for the bullet
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
