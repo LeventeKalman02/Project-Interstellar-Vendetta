@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: -5926851273340228827}
   player: {fileID: 5015141174216889208}
-  health: 150
+  health: 200
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
@@ -1303,7 +1303,7 @@ MonoBehaviour:
   walkPointRange: 7
   timeBetweenAttacks: 0.3
   sightRange: 15
-  attackRange: 1.5
+  attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!1 &4988374817210308863
@@ -1732,6 +1732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6190964853199515844}
   - component: {fileID: 8475813994332485713}
+  - component: {fileID: 6501319548024030164}
   m_Layer: 0
   m_Name: mixamorig:RightHand
   m_TagString: Untagged
@@ -1778,8 +1779,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.27949363, y: 0.59577775, z: 0.14930879}
+  m_Size: {x: 0.5589872, y: 1.1915556, z: 0.2986176}
   m_Center: {x: -0.035496026, y: -0.04591937, z: 0.018043146}
+--- !u!114 &6501319548024030164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606862846835298022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3ef8c6fe1f9d444ad30bdbbc8442a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAI: {fileID: 816860120273964817}
 --- !u!1 &6630981647395753035
 GameObject:
   m_ObjectHideFlags: 0

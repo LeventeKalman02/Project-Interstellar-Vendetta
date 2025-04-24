@@ -7,21 +7,23 @@ TagManager:
   - Meteor
   - LeftHand
   - RightHand
+  - Enemy
+  - RightHandModel
+  - LeftHandModel
   - Left Hand
   - Right Hand
-  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grab Object
   - Water
   - UI
   - Player
   - Ground
   - Enemy
   - 
-  - 
+  - Camera
   - 
   - 
   - 

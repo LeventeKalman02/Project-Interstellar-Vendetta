@@ -86,12 +86,18 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+        if (!alreadyAttacked){
             animator.SetTrigger("Attack"); //trigger the attack animation
             agent.SetDestination(transform.position); //stop moving
             transform.LookAt(player); //look at the player
             Debug.Log("Attacking player!");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks); // Reset attack after a delay
         }
+    }
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
     }
 
     //enable the attack collider
@@ -104,16 +110,34 @@ public class EnemyAI : MonoBehaviour
         boxCollider.enabled = false;
     }
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Player detected!" + other.gameObject.name); //log player detection
+        if (other.CompareTag("Player"))
+        {
             //call the TakeDamage function from the PlayerHealth script
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null) {
+            if (playerHealth != null)
+            {
                 playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
                 Debug.Log("Player took damage!");
             }
         }
-        
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Player detected2!" + collision.gameObject.name); //log player detection
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            //call the TakeDamage function from the PlayerHealth script
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                Debug.Log("Player took damage!");
+            }
+        }
     }
 
     public void TakeDamage(int damage) {
@@ -124,6 +148,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void DestroyEnemy() {
+        Check_enemies_alive.instance.KilledOpponent(gameObject); //call the KilledOpponent function from the Check_enemies_alive script
         Destroy(gameObject); //destroy the enemy game object
     }
 
