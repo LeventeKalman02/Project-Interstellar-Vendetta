@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour
     {
         // Reduce health by damage amount
         health -= damage;
+        Debug.Log($"Player took {damage} damage. Current health: {health}");
 
         // Clamp health to ensure it doesn't go below 0
         health = Mathf.Clamp(health, 0, maxHealth);
@@ -39,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
         // Update the health text to display the current health
         if (healthText != null)
         {
-            healthText.text = "Health: " + health.ToString("F0"); // Display health as an integer
+            healthText.text = health.ToString("F0"); // Display health as an integer
         }
     }
 

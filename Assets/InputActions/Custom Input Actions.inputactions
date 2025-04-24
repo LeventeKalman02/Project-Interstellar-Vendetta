@@ -6,7 +6,7 @@
             "id": "5ca33d50-b18a-4eff-b95e-836586a55eb1",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "PauseMenu",
                     "type": "Button",
                     "id": "c1c737af-bb3f-4c64-b7b6-be190e9e7eda",
                     "expectedControlType": "",
@@ -19,11 +19,11 @@
                 {
                     "name": "",
                     "id": "99f64668-65b7-4e9f-b403-2de611f4aaf7",
-                    "path": "<OculusTouchController>/menu",
+                    "path": "<XRController>{LeftHand}/thumbstickClicked",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "PauseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

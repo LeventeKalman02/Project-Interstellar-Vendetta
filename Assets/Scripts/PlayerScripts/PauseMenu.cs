@@ -1,68 +1,56 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenuUI;
 
-    public bool pauseMenu = true;
+    public Button restartButton;
+    public Button BackToMenuButton;
+    public Button exitButton;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DisplayUI();
+        pauseMenuUI.SetActive(false);
     }
 
     public void PauseButtonPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
+            restartButton.onClick.AddListener(Restart);
+            BackToMenuButton.onClick.AddListener(BackToMenu);
+            exitButton.onClick.AddListener(Exit);
             DisplayUI();
         }
     }
 
     public void DisplayUI()
     {
-        if (pauseMenu)
-        {
-            pauseMenuUI.SetActive(false);
-            pauseMenu = true;
-            Time.timeScale = 1; // Resume the game
-        }
-        else if(!pauseMenu)
-        {
-            pauseMenuUI.SetActive(true);
-            pauseMenu = false;
-            Time.timeScale = 0; // Pause the game
-        }
+        bool isPaused = !pauseMenuUI.activeSelf; // Toggle the current state of the pause menu
+        pauseMenuUI.SetActive(isPaused); // Show or hide the pause menu
+        Time.timeScale = isPaused ? 0 : 1; // Pause or resume the game
+        Debug.Log(isPaused ? "Game Paused" : "Game Resumed");
     }
 
     public void Restart() {
-        if (SceneTransitionManager.singleton != null)
-        {
-            SceneTransitionManager.singleton.GoToScene(SceneManager.GetActiveScene().buildIndex); // Use SceneTransitionManager for fade-out
-        }
-        else
-        {
-            Debug.LogError("SceneTransitionManager is not set up in the scene.");
-        }
+        Debug.Log("Restarting the current scene...");
+        Time.timeScale = 1; // Ensure the game is unpaused before restarting
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
     }
 
     public void BackToMenu() {
-        if (SceneTransitionManager.singleton != null)
-        {
-            SceneTransitionManager.singleton.GoToScene(0); // Use SceneTransitionManager for fade-out
-        }
-        else
-        {
-            Debug.LogError("SceneTransitionManager is not set up in the scene.");
-        }
+        Debug.Log("Returning to the main menu...");
+        Time.timeScale = 1; // Ensure the game is unpaused before transitioning
+        SceneManager.LoadScene(0); // Load the main menu scene (index 0)
     }
 
     public void Exit() {
-        Application.Quit();
-        Debug.Log("Exit Game");
+        Debug.Log("Exiting the game...");
+        Application.Quit(); // Quit the application
     }
 
 }

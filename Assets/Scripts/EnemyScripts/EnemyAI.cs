@@ -86,12 +86,18 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(player.position); //set the destination to the player position
     }
     private void Attack() {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack")){
+        if (!alreadyAttacked){
             animator.SetTrigger("Attack"); //trigger the attack animation
             agent.SetDestination(transform.position); //stop moving
             transform.LookAt(player); //look at the player
             Debug.Log("Attacking player!");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks); // Reset attack after a delay
         }
+    }
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
     }
 
     //enable the attack collider
