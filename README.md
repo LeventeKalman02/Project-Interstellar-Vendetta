@@ -16,7 +16,9 @@ This game was tested and developed on the Oculus Quest 2 headset.
 ### Run the game
 Download the project as a ``.Zip`` file and extract it to a folder of your choosing. 
 
-To run the game you need to execute the .exe file.
+Navigate to the Build Folder.
+
+Here you just need to run the Interstellar Vendetta.exe file.
 
 ### Win Condition
 To win the game and survive, you need to find and kill all enemies on the map and then head to a certain location on the map which you can escape from and survive the horror.
@@ -33,7 +35,3 @@ The goal of the game is to fight your way to the Hangar where you have to get on
 
 ![image](https://github.com/user-attachments/assets/d6cebda1-f4e5-41f2-b530-11cc0ce215ae)
 
-## Main Issues & Bugs Faced During Development
-- Snapping of objects to the hand at the incorrect location on the object. Adjusted in editor and setting the default values to snap correctly.
-- Hand Model/Animation stopped working. Research, testing and bug fixes carried out to try to solve the issue.
--  Minor bug/issue. Hand model cannot be disabled while holding weapons. Decided not to fix as of now.
