@@ -5,8 +5,11 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
+<<<<<<< HEAD
 /[Bb]uild/
 /[Bb]uilds/
+=======
+>>>>>>> cc6754b (added build)
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 

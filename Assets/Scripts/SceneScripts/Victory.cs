@@ -8,13 +8,22 @@ public class Victory : MonoBehaviour
     public GameObject Menu;
 
     [Header("Main Menu Buttons")]
+
+    public Button replayButton;
     public Button BackToMainMenuButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         EnableMenu();
+        replayButton.onClick.AddListener(StartGame);
         BackToMainMenuButton.onClick.AddListener(BackToMainMenu);
+    }
+
+    public void StartGame()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(1);
     }
 
     public void BackToMainMenu()
