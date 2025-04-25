@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
     public Transform player;
 
     public float health = 100f;
+
+    public float attackDamage = 20f;
     public LayerMask whatIsGround, whatIsPlayer;
 
     //patrolling
@@ -119,7 +121,7 @@ public class EnemyAI : MonoBehaviour
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                playerHealth.TakeDamage(attackDamage); //pass the damage amount to the TakeDamage function
                 Debug.Log("Player took damage!");
             }
         }
@@ -134,7 +136,7 @@ public class EnemyAI : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(20); //pass the damage amount to the TakeDamage function
+                playerHealth.TakeDamage(attackDamage); //pass the damage amount to the TakeDamage function
                 Debug.Log("Player took damage!");
             }
         }

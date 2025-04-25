@@ -1293,6 +1293,7 @@ MonoBehaviour:
   agent: {fileID: -5926851273340228827}
   player: {fileID: 5015141174216889208}
   health: 200
+  attackDamage: 30
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
@@ -1779,8 +1780,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.5589872, y: 1.1915556, z: 0.2986176}
-  m_Center: {x: -0.035496026, y: -0.04591937, z: 0.018043146}
+  m_Size: {x: 0.5589872, y: 1.1915556, z: 0.42968172}
+  m_Center: {x: -0.03549604, y: -0.045919362, z: -0.047488928}
 --- !u!114 &6501319548024030164
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class SimpleShoot : MonoBehaviour
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootSound;
+    
     [Header("Location References")]
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform barrelLocation;
@@ -25,6 +28,7 @@ public class SimpleShoot : MonoBehaviour
 
     void Start()
     {
+
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -46,6 +50,8 @@ public class SimpleShoot : MonoBehaviour
             //Create the muzzle flash
             GameObject tempFlash;
             tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
+
+            shootSound.Play(0); // Play the shooting sound
 
             //Destroy the muzzle flash effect
             Destroy(tempFlash, destroyTimer);
