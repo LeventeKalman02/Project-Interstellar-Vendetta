@@ -14,11 +14,19 @@ The name for the game is inspired by the setting. "Interstellar" invites the vas
 This game was tested and developed on the Oculus Quest 2 headset.
 
 ### Run the game
-Download the project as a ``.Zip`` file and extract it to a folder of your choosing. 
 
-Navigate to the Build Folder.
+You are required to have Unity installed and the correct editor version installed.
 
-Here you just need to run the Interstellar Vendetta.exe file.
+Download the project either as a ``.Zip`` file and extract it to a folder of your choosing, or clone the project.
+
+You will have to build the project yourself as Github doesn't allow file sizes that big.
+
+Steps to build the project:
+
+- Open the project with unity and the correct editor version.
+- In the top left, navigate to ``File`` and ``Build Profiles``.
+- Make sure in the left column you have ``Windows selected``.
+- All you need to do is just click ``Build`` and select a file destination of your choosing. It is recommended you create an empty folder for this.
 
 ### Win Condition
 To win the game and survive, you need to find and kill all enemies on the map and then head to a certain location on the map which you can escape from and survive the horror.
